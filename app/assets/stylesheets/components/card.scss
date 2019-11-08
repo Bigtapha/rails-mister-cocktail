@@ -1,0 +1,32 @@
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: 150;
+    width: 150;
+    // crop: :fill;
+}
+
+div.card .card-content {
+    padding: 12px 12px 0px 12px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 10 10 30 rgba(0, 0, 0, 0.1);
+}
+
+div.card .card-image {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+div.card .card-user {
+    display: flex;
+    align-items: center;
+}
+
+.card-user img {
+    margin-right: 8px;
+}

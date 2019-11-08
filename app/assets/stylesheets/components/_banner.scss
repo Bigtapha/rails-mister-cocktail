@@ -1,0 +1,11 @@
+.banner {
+    box-sizing: border-box;
+    color: white;
+    padding: 150px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("../../images/background.jpg");
+    background-size: cover;
+  }
+  
+  .banner.full-height {
+    height: 100vh;
+  }

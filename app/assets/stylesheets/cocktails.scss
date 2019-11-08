@@ -1,3 +1,44 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-family: "Open Sans", "Helvetica", "sans-serif";
+    padding-bottom: 200px;
+    margin: 0;
+    background: #F4F4F4;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", "sans-serif";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.list-inline {
+    padding: 8px 0px;
+    text-align: end;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+    color: lightgrey;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.list-inline i {
+    margin-right: 4px;
+}
