@@ -1,15 +1,24 @@
 
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
 
-  <h4>Doses</h4>
-  <% @cocktail.doses.each do |dose| %>
-    <p><%= dose.description %> of <%= dose.ingredient.name %></p>
-  <% end %>
 
-  <%= link_to 'Back', cocktails_path %>
 
-  <%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail) %>
+<div class="card-deck">
+  <div class="col-sm-6">
+
+      <%= cl_image_tag @cocktail.image, class:"card-img-top", height: 250, width: 350 %>
+
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= @cocktail.name %></h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <% @cocktail.doses.each do |dose| %>
+          <p><%= dose.description %> of <%= dose.ingredient.name %></p>
+        <% end %>
+        <%= link_to 'Back', cocktails_path, class:'btn btn-primary' %>
+        <%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail), class:'btn btn-primary' %>
+      </div>
+
+    </div>
+  </div>
 </div>
-
-<%= cl_image_tag @cocktail.image, height: 500, width: 500, crop: :fill %>

@@ -1,16 +1,19 @@
-<div class="container">
+
   <h1>All cocktails</h1>
 
-<div class = >
+<div class='card-deck' style="margin: auto 25px">
   <% @cocktails.each do |cocktail| %>
-    <div class=>
-      <h3><%= link_to cocktail.name, cocktail_path(cocktail)%></h3>
-      <%= cl_image_tag cocktail.image, height: 150, width: 150, crop: :fill %>
-    </div>
+      <div class="card m-3" style="width: 19rem;" >
+        <%= cl_image_tag cocktail.image, class:"card-img-top", height: 200, width: 200 %>
+        <div class="card-body">
+        <h5 class="card-title"> <%= cocktail.name %> </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h3><%= link_to "View details", cocktail_path(cocktail), class:"btn btn-primary"%></h3>
+        </div>
+      </div>
   <% end %>
-  </div>
-
-  <br>
-  <%= link_to 'Add new cocktail', new_cocktail_path %>
 </div>
+
+<button> <%= link_to 'Add new cocktail', new_cocktail_path %> </button>
+
 
