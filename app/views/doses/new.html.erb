@@ -1,20 +1,18 @@
-<h1>New Dose for <%= @cocktail.name %></h1>
+<div class="container">
+  <h1>Add new dose to <%= @cocktail.name %></h1>
 
- 
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-   <%= f.error_notification %>
-   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
 
-  <div class="form-inputs">
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
     <%= f.input :description %>
     <%= f.association :ingredient, prompt: "Choose an Ingredient" %>
 
-  </div>
-
-  <div class="form-actions">
     <%= f.button :submit %>
-  </div>
-<% end %>
+  <% end %>
 
 <%= link_to 'Back to cocktail', cocktail_path(@cocktail) %>
+</div>
+
 
